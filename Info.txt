@@ -1,0 +1,2 @@
+﻿OpenOS is an operating system used to test publish data sharing across multiple devices! This is done by using Pythons Requests system with GitHub's Gists, which are super useful! Nothing is available yet, but I'm working on it! OpenOS will have an app menu for selecting and opening apps using indexing! Apps refer to mini Python programs that OpenOS can run!
+
