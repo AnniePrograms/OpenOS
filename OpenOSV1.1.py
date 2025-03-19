@@ -4,6 +4,7 @@ from os import system
 
 AppsDictionary = {}
 AppsNameList = []
+AppInterpretation = []
 
 system('clear')
 try:
@@ -38,7 +39,10 @@ while True:
 	try:
 		ItemInput = int(input('Choose app (Index) > '))
 		system('clear')
-		exec(''.join(AppsDictionary[AppsNameList[ItemInput - 1]]))
+		for CodeLine in ''.join(AppsDictionary[AppsNameList[ItemInput - 1]]).split('--nl'):
+                	AppInterpretation.append(CodeLine)
+		exec('\n'.join(AppInterpretation))
+		AppInterpretation.clear()
 		input('\033[36;1mApp closed -\033[0m ')
 		system('clear')
 	except (TypeError, IndexError) as ErrorDetails3:
