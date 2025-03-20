@@ -61,6 +61,6 @@ while True:
 		AppInterpretation.clear()
 		input('\033[33;1mApp closed -\033[0m ')
 		system('clear')
-	except (TypeError, IndexError) as ErrorDetails3:
+	except (ValueError, IndexError) as ErrorDetails3:
 		system('clear')
 		print('Looks like you entered the wrong index, try again!\n')
