@@ -38,7 +38,7 @@ try:
 	for AppItem in CloudRequestAppsList.text.splitlines():
 		CloudRequestAppItem = get(AppItem)
 		CloudRequestAppItem.raise_for_status()
-		AppsDictionary[CloudRequestAppItem.text.splitlines()[0]] = CloudRequestAppItem.text.splitlines()[1:]
+		AppsDictionary[CloudRequestAppItem.text.splitlines()[0]] = '--nl'.join(CloudRequestAppItem.text.splitlines()[1:])
 		AppsNameList.append(CloudRequestAppItem.text.splitlines()[0])
 except Exception as ErrorDetails2:
 	print(f'\033[31;1mSomething went wrong loading the apps!\n\nError Details:\n{ErrorDetails2}\033[0m')
