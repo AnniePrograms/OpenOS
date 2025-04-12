@@ -5,4 +5,5 @@ OpenOS is an operating system used to test _**public data sharing across multipl
 If you want an easier and smoother way to get OpenOS, in your Linux terminal, run:
 
 ````git clone https​://github.com/AnniePrograms/OpenOS.git````
+
 And _**it's that simple!**_
