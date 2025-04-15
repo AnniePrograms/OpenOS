@@ -43,7 +43,7 @@ try:
 		AppsNameList.append(CloudRequestAppItem.text.splitlines()[0])
 	localapps = open('localappdirlist.txt', 'r').readlines()
 	for app in localapps:
-		indapp = open(app,'r').readlines()
+		indapp = open(app.strip(),'r').readlines()
 		AppsDictionary[indapp[0][0:]] = indapp[1:]
 		AppsNameList.append(indapp[0][0:])
 except Exception as ErrorDetails2:
