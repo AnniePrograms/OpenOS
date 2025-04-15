@@ -42,13 +42,13 @@ try:
 		AppsDictionary[CloudRequestAppItem.text.splitlines()[0]] = '--nl'.join(CloudRequestAppItem.text.splitlines()[1:])
 		AppsNameList.append(CloudRequestAppItem.text.splitlines()[0])
 	localapps = open('localappdirlist.txt', 'r').readlines()
-	if len(localapps) > 0:
+	if len(localapps[0:]) > 1:
 		for app in localapps:
 			indapp = open(app.strip(),'r').readlines()
 			AppsDictionary[indapp[0][0:]] = indapp[1:]
 			AppsNameList.append(indapp[0][0:])
 	else:
-		break
+		pass
 except Exception as ErrorDetails2:
 	print(f'\033[31;1mSomething went wrong loading the apps!\n\nError Details:\n{ErrorDetails2}\033[0m')
 	input('\033[36;1mLoad Failed, submit an issue at https://github.com/AnniePrograms/OpenOS/ -\033[0m ')
