@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#Developed by Annie
 from requests import *
 from os import system
 
@@ -42,7 +43,7 @@ try:
 		AppsDictionary[CloudRequestAppItem.text.splitlines()[0]] = '--nl'.join(CloudRequestAppItem.text.splitlines()[1:])
 		AppsNameList.append(CloudRequestAppItem.text.splitlines()[0])
 	localapps = open('localappdirlist.txt', 'r').readlines()
-	if len(localapps[0:]) > 1:
+	if not localapps[0].strip() == '':
 		for app in localapps:
 			indapp = open(app.strip(),'r').readlines()
 			AppsDictionary[indapp[0][0:]] = indapp[1:]
